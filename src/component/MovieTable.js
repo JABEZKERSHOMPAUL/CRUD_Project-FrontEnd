@@ -27,7 +27,7 @@ function TabelMovie() {
     const [editdata, seteditdata] = useState({})
     // -------- S for get data from api----->
     const fetchMoiveDetail = async () => {
-        const res = await axios.get('https://schoolmangement.onrender.comget/all/movie', {
+        const res = await axios.get('https://schoolmangement.onrender.com/get/all/movie', {
             headers: {
                 Authorization: localStorage.getItem('token')
             }
@@ -54,7 +54,7 @@ function TabelMovie() {
 
 
     const aggregateApi =async()=>{
-        const res = await  axios.post('https://schoolmangement.onrender.commovie/aggregation',aggregate,{
+        const res = await  axios.post('https://schoolmangement.onrender.com/movie/aggregation',aggregate,{
             headers:{
                 Authorization:localStorage.getItem('token')
             }
