@@ -11,7 +11,7 @@ function AllTabel() {
     let token = localStorage.getItem('token')
 
     const verifyUser = async () => {
-        const res = await axios.post('http://localhost:8000/verify/user', { token: token })
+        const res = await axios.post('https://schoolmangement.onrender.com/verify/user', { token: token })
 
 
         if (res.data.status === 1) {

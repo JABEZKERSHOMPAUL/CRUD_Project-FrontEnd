@@ -22,7 +22,7 @@ function Form() {
     }
 
     const handleSumbit=async(e)=>{
-        const res =await axios.post("http://localhost:8000/create/student",loginData,{
+        const res =await axios.post("https://schoolmangement.onrender.com/create/student",loginData,{
             headers:{
                 Authorization:localStorage.getItem('token')
             }

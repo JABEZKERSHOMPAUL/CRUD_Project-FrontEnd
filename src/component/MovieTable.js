@@ -27,7 +27,7 @@ function TabelMovie() {
     const [editdata, seteditdata] = useState({})
     // -------- S for get data from api----->
     const fetchMoiveDetail = async () => {
-        const res = await axios.get('http://localhost:8000/get/all/movie', {
+        const res = await axios.get('https://schoolmangement.onrender.comget/all/movie', {
             headers: {
                 Authorization: localStorage.getItem('token')
             }
@@ -54,7 +54,7 @@ function TabelMovie() {
 
 
     const aggregateApi =async()=>{
-        const res = await  axios.post('http://localhost:8000/movie/aggregation',aggregate,{
+        const res = await  axios.post('https://schoolmangement.onrender.commovie/aggregation',aggregate,{
             headers:{
                 Authorization:localStorage.getItem('token')
             }
@@ -86,7 +86,7 @@ function TabelMovie() {
     }
     //-----------geting single data to show in one id vieww---
     const fetchsingleMovie = async () => {
-        const res = await axios.get(`http://localhost:8000/get/movie/${id}`, {
+        const res = await axios.get(`https://schoolmangement.onrender.com/get/movie/${id}`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }
@@ -118,7 +118,7 @@ function TabelMovie() {
             })
                 .then((willDelete) => {
                     if (willDelete) {
-                        axios.delete(`http://localhost:8000/delete/movie/${id}`, {
+                        axios.delete(`https://schoolmangement.onrender.com/delete/movie/${id}`, {
                             headers: {
                                 Authorization: localStorage.getItem('token')
                             }
@@ -154,7 +154,7 @@ function TabelMovie() {
 
     //=======save data in popup====
     const handleEdit = async () => {
-        const res = await axios.get(`http://localhost:8000/get/movie/${id}`, {
+        const res = await axios.get(`https://schoolmangement.onrender.com/get/movie/${id}`, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }
@@ -178,7 +178,7 @@ function TabelMovie() {
     }
 
     const handleEditSubmit = async (id) => {
-        const res = await axios.put(`http://localhost:8000/update/movie/${id}`, editdata, {
+        const res = await axios.put(`https://schoolmangement.onrender.com/update/movie/${id}`, editdata, {
             headers: {
                 Authorization: localStorage.getItem('token')
             }

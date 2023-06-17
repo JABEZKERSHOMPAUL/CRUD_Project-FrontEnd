@@ -16,7 +16,7 @@ function Tabels() {
     const [editData,seteditData] = useState({})
 
     const fetchsingleStudent = async () => {
-        const res = await axios.get(`http://localhost:8000/get/student/${id}`,{
+        const res = await axios.get(`https://schoolmangement.onrender.com/get/student/${id}`,{
             headers: {
                 Authorization:localStorage.getItem('token')
             }
@@ -36,7 +36,7 @@ function Tabels() {
     }
 
     const fetchStudentList = async () => {
-        const res = await axios.get("http://localhost:8000/get/all/student",{
+        const res = await axios.get("https://schoolmangement.onrender.com/get/all/student",{
             headers: {
                 Authorization:localStorage.getItem('token')
             }
@@ -75,7 +75,7 @@ function Tabels() {
               })
                 .then((willDelete) => {
                   if (willDelete) {
-                    axios.delete(`http://localhost:8000/delete/student/${id}`,{
+                    axios.delete(`https://schoolmangement.onrender.com/delete/student/${id}`,{
                         headers: {
                             Authorization:localStorage.getItem('token')
                         }
@@ -112,7 +112,7 @@ function Tabels() {
     }
 
     const handleEdit=async()=>{
-        const res=await axios.get(`http://localhost:8000/get/student/${id}`,{
+        const res=await axios.get(`https://schoolmangement.onrender.com/get/student/${id}`,{
             headers: {
                 Authorization:localStorage.getItem('token')
             }
@@ -124,7 +124,7 @@ function Tabels() {
 
 const handleEditSubmit = async(id)=>{
     // console.log(editData)
-    const res = await axios.put(`http://localhost:8000/update/student/${id}`,editData,{
+    const res = await axios.put(`https://schoolmangement.onrender.com/update/student/${id}`,editData,{
         headers: {
             Authorization:localStorage.getItem('token')
         }

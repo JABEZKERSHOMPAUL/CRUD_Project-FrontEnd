@@ -14,7 +14,7 @@ function Topbar() {
 
     let token = localStorage.getItem('token')
     const verifyUser = async () => {
-        const res = await axios.post('http://localhost:8000/verify/user', { token: token })
+        const res = await axios.post('https://schoolmangement.onrender.com/verify/user', { token: token })
 
 
         if (res.data.status === 1) {
@@ -29,7 +29,7 @@ function Topbar() {
     }, [token])
 
     const verify = async () => {
-        const res = await axios.post('http://localhost:8000/verify/user', { token: token })
+        const res = await axios.post('https://schoolmangement.onrender.com/verify/user', { token: token })
         if (res.data.status === 1) {
             setUserData(res.data.user)
         }
@@ -80,7 +80,7 @@ function Topbar() {
         }
 
 
-        const res = await axios.post("http://localhost:8000/user/signin", userLogin)
+        const res = await axios.post("https://schoolmangement.onrender.com/user/signin", userLogin)
         console.log(res)
         if (res.data.status === 1) {
             toast.success(res.data.message)
@@ -140,7 +140,7 @@ function Topbar() {
             }
         }
 
-        const res = await axios.post('http://localhost:8000/create/register', signup)
+        const res = await axios.post('https://schoolmangement.onrender.com/create/register', signup)
 
         if (res.data.status === 1) {
             toast.success(res.data.message)

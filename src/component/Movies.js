@@ -20,7 +20,7 @@ function Movies() {
 
 
     const handleSumbit = async (e) => {
-        const res = await axios.post('http://localhost:8000/create/movie', detail,{
+        const res = await axios.post('https://schoolmangement.onrender.com/create/movie', detail,{
             headers:{
                 Authorization:localStorage.getItem('token')
             }
